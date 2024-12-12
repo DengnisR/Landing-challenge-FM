@@ -1,37 +1,36 @@
+namespace Retos {
 
-
-interface activity {
-    title: string
-    class: string
-    timeframes:{
-        daily:{
-            current: number
-            previous: number
-        }
-        weekly:{
-            current: number
-            previous: number
-        }
-        monthly:{
-            current: number
-            previous: number
+    interface activity {
+        title: string
+        class: string
+        timeframes:{
+            daily:{
+                current: number
+                previous: number
+            }
+            weekly:{
+                current: number
+                previous: number
+            }
+            monthly:{
+                current: number
+                previous: number
+            }
         }
     }
-}
 
+    const main = document.querySelector(".container-info-grid") as HTMLDivElement
 
-const contInfoGrid = document.querySelector(".container-info-grid") as HTMLDivElement
+    fetch("./data.json")
+        .then(response => response.json())
+        .then((data: activity[])=>{
+            data.forEach(element => {
+                let title = element.title
+                let classes = element.class
+                let dailyCurrent = element.timeframes.daily.current.toString()
+                let dailyprevious = element.timeframes.daily.previous.toString()
 
-fetch("./data.json")
-    .then(response => response.json())
-    .then((data: activity[])=>{
-        data.forEach(element => {
-            let title = element.title
-            let classes = element.class
-            let dailyCurrent = element.timeframes.daily.current.toString()
-            let dailyprevious = element.timeframes.daily.previous.toString()
-            
-            contInfoGrid.innerHTML += `
+                main.innerHTML += `
             <div class="container-card-outside ${classes}">
                 <div class="container-card-inside">
                     <div class="header-card">
@@ -43,15 +42,16 @@ fetch("./data.json")
                 </div>
             </div>
             `
-        });
-        
-        const daily = document.querySelector(".daily") as HTMLParagraphElement
-    
-        const hours = document.querySelectorAll(".hours")
-        const last = document.querySelector(".last") as HTMLParagraphElement
+            });
+
+            const daily = document.querySelector(".daily") as HTMLParagraphElement
+
+            const hours = document.querySelectorAll(".hours")
+            const last = document.querySelector(".last") as HTMLParagraphElement
 
 
-    })
-    .catch((error)=>{
-        console.error("tenemos un error", error)
-    })
+        })
+        .catch((error)=>{
+            console.error("tenemos un error", error)
+        })
+}
