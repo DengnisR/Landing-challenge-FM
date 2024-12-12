@@ -1,5 +1,12 @@
 [
     {
+        "url": "./retos/reto-17/index.html",
+        "imgUrl":"./retos/reto-17/time-tracking-dashboard-main/design/desktop-design.jpg",
+        "name": "Time tracking dashboard",
+        "description": "Un dashboard con el objetivo de hacer seguimiento a tareas del dia mediante el conteo de tiempo..",
+        "filter": "Junior"
+    },
+    {
         "url": "./retos/reto-16/index.html",
         "imgUrl":"./retos/reto-16/intro-section-with-dropdown-navigation-main/design/desktop-design.jpg",
         "name": "Intro section with dropdown navigation main",
