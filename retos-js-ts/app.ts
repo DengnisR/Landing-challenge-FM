@@ -1,4 +1,4 @@
-namespace Retos {
+namespace RetosJsTs {
     interface Data {
         url: string,
         imgUrl: string,

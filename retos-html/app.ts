@@ -1,4 +1,4 @@
-namespace Retos {
+namespace RetosHtml {
     interface Data {
         url: string,
         imgUrl: string,

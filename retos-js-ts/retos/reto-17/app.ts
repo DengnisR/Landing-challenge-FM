@@ -1,4 +1,4 @@
-namespace Retos {
+namespace Reto17 {
 
     interface activity {
         title: string
