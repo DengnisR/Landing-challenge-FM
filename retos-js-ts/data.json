@@ -2,8 +2,8 @@
     {
         "url": "./retos/reto-17/index.html",
         "imgUrl":"./retos/reto-17/time-tracking-dashboard-main/design/desktop-design.jpg",
-        "name": "Time tracking dashboard",
-        "description": "Un dashboard con el objetivo de hacer seguimiento a tareas del dia mediante el conteo de tiempo..",
+        "name": "Time tracking dashboard main",
+        "description": "UUn panel de control interactivo que permite visualizar y gestionar el tiempo dedicado a diferentes actividades, con opciones de visualización diaria, semanal y mensual.",
         "filter": "Junior"
     },
     {
